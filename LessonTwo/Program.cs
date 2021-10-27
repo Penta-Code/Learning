@@ -1,9 +1,17 @@
-﻿class Rectangle
+﻿Rectangle MyRectangle = new (7, 8);
+
+Console.WriteLine($"Rectangle area = {MyRectangle.AreaCalculator()}");
+
+//Console.WriteLine($"Rectangle perimetr = {MyRectangle.PerimetrCalculator()}");
+
+Console.WriteLine(MyRectangle);
+
+
+class Rectangle
 {
     double side1, side2;
-
-    double Side1 { get; }
-    double Side2 { get; }
+    double Area { get; }
+    double Perimetr { get; }
 
     public Rectangle(double side1, double side2)
     {
@@ -11,15 +19,20 @@
         this.side2 = side2;
     }
 
-    double AreaCalculator(double side1, double side2)
+    public double AreaCalculator()
     {
-        double S = 0.5 * side1 * side2;
+        double S = side1 * side2;
         return S;
     }
 
-    double PerimetrCalculator(double side1, double side2)
+    public double PerimetrCalculator()
     {
-        double perimetr = (side1 * 2) + (side2 * 2);
-        return perimetr;
+        double P = 2 * (side1 + side2);
+        return P;
+    }
+
+    public override string ToString()
+    {
+        return $"P and S = {PerimetrCalculator()} and {AreaCalculator()}";
     }
 }
