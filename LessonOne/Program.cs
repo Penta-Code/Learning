@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using LessonOne;
 
 Address MyAddress = new Address("72056", "US", "Tampa", "Bane Ave", "14", "82");
 
@@ -32,36 +32,3 @@ Console.WriteLine($"City: {MyAddress3.City}");
 Console.WriteLine($"Street: {MyAddress3.Street}");
 Console.WriteLine($"House: {MyAddress3.House}");
 Console.WriteLine($"Appartment: {MyAddress3.Appartment}");
-
-
-class Address
-{
-    private string index = "", country = "", city = "", street = "", house = "", appartment = "";
-    public string? Index { get; set; }
-    public string? Country { get; set; }
-    public string? City { get; set; }
-    public string? Street { get; set; }
-    public string? House { get; set; }
-    public string? Appartment { get; set; }
-
-
-    public Address()
-    { 
-    
-    }
-
-    public Address(string index, string country, string city, string street, string house, string appartment)
-    {
-        Index = index;
-        Country = country;
-        City = city;
-        Street = street;
-        House = house;
-        Appartment = appartment;
-    }
-
-    public override string ToString()
-    {
-        return "Overriden constr";
-    }
-}
