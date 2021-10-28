@@ -4,10 +4,8 @@ Title myTitle = new Title("C# for starters");
 Author myAuthor = new Author("Yuri S");
 Content myContent = new Content("Learn C Sharp from starter to professional");
 
-Book myBook = new Book();
+Book myBook = new Book("Test Author", "Test Title", "Test Content");
 
-myBook.Title = myTitle.BookTitle;
-myBook.Author = myAuthor.BookAuthor;
-myBook.Content = myContent.BookContent;
+myBook.Show();
 
-Console.WriteLine(myBook);
+//Console.WriteLine(myBook);

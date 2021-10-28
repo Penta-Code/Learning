@@ -8,13 +8,29 @@ namespace LessonThree
 {
     public class Book
     {
-        public string Title { set; get; }
-        public string Author { set; get; }
-        public string Content { set; get; }
+        readonly Title title;
+
+        readonly Author author;
+
+        readonly Content content;
+
+        public Book(string title, string author, string content)
+        {
+            this.title = new Title(title);
+            this.author = new Author(author);
+            this.content = new Content(content);
+        }
+
+        public void Show()
+        {
+            title.Show();
+            author.Show();
+            content.Show();
+        }
 
         public override string ToString()
         {
-            return $"Author is {Author}.\nTitle is {Title}.\nContent: {Content}";
+            return $"Author is {author}.\nTitle is {title}.\nContent: {content}";
         }
     }
 }
