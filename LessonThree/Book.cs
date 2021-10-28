@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace LessonThree
 {
-    internal class Book
+    public class Book
     {
+        public string Title { set; get; }
+        public string Author { set; get; }
+        public string Content { set; get; }
+
+        public override string ToString()
+        {
+            return $"Author is {Author}.\nTitle is {Title}.\nContent: {Content}";
+        }
     }
 }

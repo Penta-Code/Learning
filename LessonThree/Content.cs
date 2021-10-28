@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LessonThree
 {
-    internal class Content
+    public class Content
     {
-        private string BookContent = "";
+        public string BookContent = "";
 
         public Content(string bookContent)
         {
