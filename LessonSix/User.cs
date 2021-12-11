@@ -9,26 +9,11 @@ namespace LessonSix
     internal class User
     {
         public string name;
-        public string surname;
-        public int age;
-        public readonly string fillingDate;
-
-        public User(string name, string surname, int age, string date)
-        {
-            this.name = name;
-            this.surname = surname;
-            this.age = age;
-            this.fillingDate = date;
-        }
+        //public int age;
 
         public void Info()
         {
-            Console.WriteLine($"User info:\n{name}\n{surname}\n{age}\n{fillingDate}");
+            Console.WriteLine($"Info:\n{name}");
         }
-
-        //public override string ToString()
-        //{
-        //    return $"User info:\n{name}\n{surname}\n{age}\n{fillingDate}";
-        //}
     }
 }

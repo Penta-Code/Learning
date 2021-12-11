@@ -1,9 +1,9 @@
 ﻿using LessonSix;
 
-User yuri = new User("Yuri", "S", 32, "12/8/2021");
+User yuri = new User();
+yuri.name = "Yuri";
+yuri.Info();
 
-Console.WriteLine(yuri);
-
-yuri.age = 35;
-
+yuri = new Emplyoee();
+yuri.name = "West";
 yuri.Info();
